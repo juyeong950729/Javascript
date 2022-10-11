@@ -103,6 +103,38 @@
         document.write(result3, "<br/>");
         result3 = b === f;
         document.write(result3, "<br/>");
+
+
+        // 연산자 우선순위 P.53
+        let a1 = 10;
+        let b1 = 20;
+        let m = 30;
+        let n = 40;
+        
+        let result4;
+        result4 = a1 > b1 || b1 >= m || m > n;      // false || false || false
+        document.write(result4, '<br/>');           // false
+        
+        result4 = a1 > b1 || b1 >= m || m <= n;     // false || false || true
+        document.write(result4, '<br/>');           // true
+
+        result4 = a1 <= b && b1 >= m && m <= n;     // true && false && true
+        document.write(result4, '<br/>');           // false
+
+        result4 = a1 <= b && b1 <= m && m <= n;     // true && true && true
+        document.write(result4, '<br/>');           // true
+
+        result4 = !(a1 > b1);                       // !false를 계산
+        document.write(result4, '<br/>');           // true
+
+
+        // 삼항 조건 연산자 P.54
+        let a2 = 10;
+        let b2 = 3;
+
+        let result5 = a2 > b2 ? "javascript" : "hello";
+        document.write(result5);    // javascript
+
     </script>
 </body>
 </html>
