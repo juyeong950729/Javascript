@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>날짜 정보 객체</title>
+    <!--
+        날짜 : 2022/10/20
+        이름 : 조주영
+        내용 : 날짜 정보 객체
+    -->
+</head>
+<body>
+    
+    <h3>예제 1</h3>
+    <script>
+        let today = new Date();
+        let nowMonth = today.getMonth(),
+            nowDate = today.getDate(),
+            nowDay = today.getDay();
+        
+        document.write("<h1>오늘 날짜 정보</h1>");
+        document.write("현재 월: " + nowMonth, "<br/>");
+        document.write("현재 일: " + nowDate, "<br/>");
+        document.write("현재 요일: " + nowDay, "<br/>");
+
+        let worldcup = new Date(2002,4,31);
+        let theMonth = worldcup.getMonth(),
+            theDate = worldcup.getDate(),
+            theDay = worldcup.getDay();
+
+        document.write("<h1>월드컵 날짜 정보</h1>");
+        document.write("2002월드컵 몇 월: " + theMonth, "<br/>");
+        document.write("2002월드컵 며칠: " + theDate, "<br/>");
+        document.write("2002월드컵 무슨 요일: " + theDay, "<br/>");
+    </script>
+
+    <h3>예제 2</h3>
+    <script>
+        let today1 = new Date();
+        let nowYear = today1.getFullYear();
+
+        let theDate1 = new Date(nowYear, 11, 31);
+        let diffDate = theDate1.getTime() - today1.getTime();
+
+        let result = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+        document.write("연말 D-day: " + result + "일 남았습니다.");
+    </script>
+    
+</body>
+</html>

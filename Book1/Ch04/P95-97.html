@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>수학 객체</title>
+    <!--
+        날짜 : 2022/10/20
+        이름 : 조주영
+        내용 : 수학 객체
+    -->
+</head>
+<body>
+    <h3>예제1</h3>
+    <script>
+        let num1 = 2.1234;
+        let maxNum1 = Math.max(10, 5, 8, 30),
+            minNum1 = Math.min(10, 5, 8, 30),
+            roundNum1 = Math.round(num1),
+            floorNum1 = Math.floor(num1),
+            ceilNum1 = Math.ceil(num1),
+            rndNum1 = Math.random(),
+            piNum1 = Math.PI;
+
+        document.write(maxNum1, "<br/>");
+        document.write(minNum1, "<br/>");
+        document.write(roundNum1, "<br/>");
+        document.write(floorNum1, "<br/>");
+        document.write(ceilNum1, "<br/>");
+        document.write(rndNum1, "<br/>");
+        document.write(piNum1, "<br/>");
+    </script>
+
+    <h3>예제2</h3>
+    <script>
+        document.write("<h1> 컴퓨터 가위, 바위, 보 맞추기 <h1>");
+
+        let game = prompt("가위, 바위, 보 중 선택하세요?", "가위");
+        let gameNum;
+        switch (game) {
+            case "가위":
+                gameNum = 1; break;
+            case "바위":
+                gameNum = 2; break;
+            case "보":
+                gameNum = 3; break;
+            default: alert("잘못 작성했습니다.");
+                location.reload();
+        }
+
+        let com = Math.floor(Math.round()*3)+1;
+
+        if (gameNum == com){
+            document.write("맞췄습니다.");
+        } else {
+            document.write("틀렸습니다.");
+        }
+    </script>
+</body>
+</html>
